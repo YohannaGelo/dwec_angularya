@@ -1,4 +1,52 @@
-<div>
-  <h1>Tu nombre es {{nombre}} y tienes {{edad}} años</h1>
-  <p>{{esFumador()}}</p>
+<div *ngIf="edad>=18;"> <!-- Solo se muestra si es mayor o igua a 18 -->
+  <h1>Mi nombre es {{nombre}}</h1> <!-- Esto se llama interpolar -->
+
+  <!-- Si es mayor muestra el parrafo, sino muestra a plantilla llamada menor -->
+  <p *ngIf="edad>=18; else menor">Es mayor de edad</p>
+  <!-- Asi creamos una plantilla a la que podemos referenciar -->
+  <ng-template #menor>
+      <p>Es menor de edad</p>
+  </ng-template>
+
+  <!-- Para hacer interpolación de métodos -->
+  <h3>{{esFumador()}}</h3>
+
+  <h3>Notas: </h3>
+  <!-- Podemos recorrer arrays con esta directiva -->
+  <ul *ngFor="let nota of notas">
+      <li>{{nota}} </li>
+  </ul>
+
+  <table border="1">
+      <tr>
+          <th>Notas</th>
+      </tr>
+      <tr *ngFor="let nota of notas">
+          <td>{{nota}} </td>
+      </tr>
+  </table>
+
+  <br>
+  <select name="" id="provincias">
+      <!-- También podemos recorrer arrays de objetos -->
+      <option *ngFor="let provincia of provincias" value="{{ provincia.id }}">{{ provincia.nombre }}</option>
+  </select>
+
+  <!-- Uso de eventos -->
+  <button (click)="pulsarBoton()">Pulsa</button>
+
+  <div>
+      <p>{{ contador }}</p>
+      <button (click)="incrementarContador()">Incremeta el contador</button>
+      <button (click)="decrementarContador()">Decrementa el contador</button>
+  </div>
+
+  <br>
+
+  <!-- Lo que se escriba en el cuadro de texto lo tendremos asociado a este atributo -->
+  <!-- Es un bind bidireccional puede ir del ts al template y viceversa -->
+  <!-- Primero aparece mi propiedad nombre : "Yohanna", pero si lo cambio en el formulario se actualizará el valor -->
+  <input type="text" [(ngModel)]="nombre">
+  <p>Nombre: {{ nombre }}</p>
+
 </div>
