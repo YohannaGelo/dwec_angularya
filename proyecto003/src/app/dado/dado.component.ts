@@ -22,8 +22,6 @@ export class DadoComponent implements OnInit {
   // }
 
 
-
-
   generaAleatorio() {
     return Math.floor(Math.random()*6)+1; // Genera un nº aleatorio del 1 al 6
   }

@@ -1,0 +1,24 @@
+<div class="container-md vh-100 d-flex flex-column justify-content-center ali">
+
+  <h1 class="display-3 text-center mb-4">El juego de los dados</h1>
+
+  <div class="col-md-7 d-flex justify-content-center align-items-center w-100">
+
+    <!-- [] Es el property Binding, lleva el nombre del atributo, siempre que este tenga un @Input() -->
+    <app-dado [valor]="valor1"></app-dado>
+    <app-dado [valor]="valor2"></app-dado>
+    <app-dado [valor]="valor3"></app-dado>
+  </div>
+
+  <!-- También podría usarse así, pero se pasaría en string no en number, por lo tanto se declararía tb como string -->
+  <!-- <app-dado valor="{{ valor3 }}"></app-dado> -->
+
+  <hr>
+  <p class="text-center fs-2">{{ resultado }}</p>
+  <hr>
+
+  <div class="col-md-7 d-flex justify-content-center align-items-center w-100">
+
+    <button (click)="lanzarDados()" class="btn btn-dark mx-0 px-4 py-2 shadow text-uppercase">Lanzar</button>
+  </div>
+</div>
