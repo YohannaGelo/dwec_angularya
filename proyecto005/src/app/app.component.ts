@@ -8,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'proyecto005';
+
+  finalCuentaAtras(nombre:string) {
+    alert(`Temporizador ${nombre} ha llegado a 0`);
+  }
 }
