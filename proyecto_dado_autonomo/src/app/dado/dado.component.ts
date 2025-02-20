@@ -9,7 +9,11 @@ import { Component, OnInit } from '@angular/core';
 
 export class DadoComponent implements OnInit {
 
-  valor = 1;
+  private valor = 1;
+
+  get valorDado() {
+    return this.valor;
+  }
 
   ngOnInit(): void {
     this.valor = this.generaAleatorio();

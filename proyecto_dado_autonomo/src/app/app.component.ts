@@ -29,7 +29,7 @@ export class AppComponent {
   }
 
   comprobarResultado() {
-    if (this.midado1.valor == this.midado2.valor && this.midado1.valor == this.midado3.valor) {
+    if (this.midado1.valorDado == this.midado2.valorDado && this.midado1.valorDado == this.midado3.valorDado) {
       this.resultado = "¡ Has ganado !";
     } else {
       this.resultado = "¡ Has perdido !";
