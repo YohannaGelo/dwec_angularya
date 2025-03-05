@@ -1,7 +1,7 @@
 .forma {
-    background-color: black;
+    /* background-color: black;
     color: white;
-    border-radius: 10px;
+    border-radius: 10px; */
     display: inline-flex;
     margin: 2rem;
     justify-content: center;
@@ -9,4 +9,10 @@
     font-size: 2rem;
     width: 5rem;
     height: 5rem;
+}
+
+.dado {
+    width: 7rem;
+    height: auto;
+    margin: 7rem;
 }

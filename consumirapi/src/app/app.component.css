@@ -1,0 +1,11 @@
+.barra {
+    display: inline-block;
+    font-size: 2rem;
+    background-color: aliceblue;
+    width: 100%;
+}
+
+a {
+    margin: 2rem;
+    text-decoration: none;
+}

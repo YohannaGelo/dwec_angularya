@@ -1,0 +1,15 @@
+<header>Encabezado</header>
+
+<!-- Para movernos por las rutas usamos la propiedad routerLink en lugar de href (hace como un preventDefault) -->
+<a routerLink="/home">Home</a>
+<a routerLink="/listadoclientes">Clientes</a>
+<a routerLink="/listadoproductos">Productos</a>
+
+<main>
+  <!-- Aquí decimos que es donde queremos cargar los componentes -->
+   <!-- De esta forma si ponemos url/home -> veremos el contenido del componente home -->
+  <router-outlet></router-outlet>
+</main>
+
+
+<footer>Footer</footer>

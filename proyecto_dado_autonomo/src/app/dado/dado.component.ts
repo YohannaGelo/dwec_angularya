@@ -11,6 +11,11 @@ export class DadoComponent implements OnInit {
 
   private valor = 1;
 
+  // Vamos a transformar el valor en una imagen
+  getImageDado() {
+    return `img/dado${this.valor}.gif`;
+  }
+
   get valorDado() {
     return this.valor;
   }

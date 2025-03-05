@@ -8,7 +8,7 @@ import { DadoComponent } from './dado/dado.component';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'proyecto_dado_autonomo';
+  title = 'Juego dados';
 
   resultado = "";
 
